@@ -1,6 +1,6 @@
 class InstallWorkCrew < ActiveRecord::Migration[5.2]
   def change
-    create_table :work_crew_member_datas do |t|
+    create_table :work_crew_member_data do |t|
       t.uuid     :group_uuid,           null: false
       t.string   :group_desc,           null: false
 
@@ -19,11 +19,10 @@ class InstallWorkCrew < ActiveRecord::Migration[5.2]
       t.timestamps                      null: false
     end
 
-    add_index  :work_crew_member_datas, :instance_uuid,
-                                        unique: true
+    add_index  :work_crew_member_data, :instance_uuid,
+                                       unique: true
 
-    add_index  :work_crew_member_datas, [:group_uuid, :instance_modulo],
-                                        unique: true
-  end
+    add_index  :work_crew_member_data, [:group_uuid, :instance_modulo],
+                                       unique: true
   end
 end

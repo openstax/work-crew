@@ -92,11 +92,11 @@ module WorkCrew
     end
 
     def read_group_records
-      @group_records = Protocol::Helpers.read_group_records(group_uuid: @group_uuid)
+      @group_records = WorkCrew::Helpers.read_group_records(group_uuid: @group_uuid)
     end
 
     def categorize_records
-      @instance_record, @live_records, @dead_records = Protocol::Helpers.categorize_records(
+      @instance_record, @live_records, @dead_records = WorkCrew::Helpers.categorize_records(
         instance_uuid:       @instance_uuid,
         dead_record_timeout: @dead_record_timeout,
         group_records:       @group_records,
@@ -108,7 +108,7 @@ module WorkCrew
     end
 
     def create_instance_record
-      Protocol::Helpers.create_record(
+      WorkCrew::Helpers.create_record(
         group_uuid:    @group_uuid,
         group_desc:    @group_desc,
         instance_uuid: @instance_uuid,
@@ -117,7 +117,7 @@ module WorkCrew
     end
 
     def has_boss_record?
-      @am_boss, @boss_record = Protocol::Helpers.get_boss_situation(
+      @am_boss, @boss_record = WorkCrew::Helpers.get_boss_situation(
         instance_uuid: @instance_uuid,
         live_records:  @live_records,
       )
@@ -131,14 +131,14 @@ module WorkCrew
     end
 
     def update_boss_vote
-      Protocol::Helpers.update_boss_vote(
+      WorkCrew::Helpers.update_boss_vote(
         instance_record: @instance_record,
         live_records:    @live_records,
       )
     end
 
     def allocate_modulo
-      Protocol::Helpers.allocate_modulo(
+      WorkCrew::Helpers.allocate_modulo(
         instance_record: @instance_record,
         live_records:    @live_records,
         boss_record:     @boss_record,
@@ -177,7 +177,7 @@ module WorkCrew
           @instance_record.next_boss_time + 1e-5.seconds
         end
 
-      @instance_record.next_boss_time = Protocol::Helpers.compute_next_time(
+      @instance_record.next_boss_time = WorkCrew::Helpers.compute_next_time(
         current_time:    time_to_use,
         reference_time:  @reference_time,
         timing_modulo:   @timing_modulo,
@@ -200,7 +200,7 @@ module WorkCrew
           @instance_record.next_work_time + 1e-5.seconds
         end
 
-      @instance_record.next_work_time = Protocol::Helpers.compute_next_time(
+      @instance_record.next_work_time = WorkCrew::Helpers.compute_next_time(
         current_time:    time_to_use,
         reference_time:  @reference_time,
         timing_modulo:   @timing_modulo,
@@ -223,7 +223,7 @@ module WorkCrew
           @instance_record.next_end_time + 1e-5.seconds
         end
 
-      @instance_record.next_end_time = Protocol::Helpers.compute_next_time(
+      @instance_record.next_end_time = WorkCrew::Helpers.compute_next_time(
         current_time:    time_to_use,
         reference_time:  @reference_time,
         timing_modulo:   @timing_modulo,
@@ -246,7 +246,7 @@ module WorkCrew
           @instance_record.next_update_time + 1e-5.seconds
         end
 
-      @instance_record.next_update_time = Protocol::Helpers.compute_next_time(
+      @instance_record.next_update_time = WorkCrew::Helpers.compute_next_time(
         current_time:    time_to_use,
         reference_time:  @reference_time,
         timing_modulo:   @timing_modulo,
@@ -262,7 +262,7 @@ module WorkCrew
     end
 
     def destroy_dead_records
-      Protocol::Helpers.destroy_dead_records(
+      WorkCrew::Helpers.destroy_dead_records(
         protocol:          self,
         dead_records:      @dead_records,
         dead_record_block: @dead_record_block,
@@ -303,7 +303,7 @@ module WorkCrew
 
     def save_record
       @instance_record.instance_count = @live_records.count
-      Protocol::Helpers.save_record(record: @instance_record)
+      WorkCrew::Helpers.save_record(record: @instance_record)
     end
 
     def compute_next_wake_time(current_time:)

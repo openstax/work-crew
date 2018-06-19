@@ -12,4 +12,25 @@
 
 ActiveRecord::Schema.define(version: 0) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "work_crew_member_data", force: :cascade do |t|
+    t.uuid "group_uuid", null: false
+    t.string "group_desc", null: false
+    t.uuid "instance_uuid", null: false
+    t.string "instance_desc", null: false
+    t.integer "instance_count", null: false
+    t.integer "instance_modulo", null: false
+    t.uuid "boss_uuid", null: false
+    t.datetime "next_end_time"
+    t.datetime "next_boss_time"
+    t.datetime "next_work_time"
+    t.datetime "next_update_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["group_uuid", "instance_modulo"], name: "index_work_crew_member_data_on_group_uuid_and_instance_modulo", unique: true
+    t.index ["instance_uuid"], name: "index_work_crew_member_data_on_instance_uuid", unique: true
+  end
+
 end

@@ -25,7 +25,20 @@ $ gem install work_crew
 ```
 
 ## Contributing
-Contribution directions go here.
+
+This gem uses Postgres.  Run
+
+```
+createuser --superuser --pwprompt work_crew
+```
+
+Use `work_crew` as the password.  Security!
+
+
+
+
+Run `bundle exec rake db:setup` to get your development and test DBs.
+
 
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
