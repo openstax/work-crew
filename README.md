@@ -1,4 +1,7 @@
 # WorkCrew
+
+[![Build Status](https://travis-ci.org/openstax/work_crew.svg?branch=master)](https://travis-ci.org/openstax/work_crew)
+
 Self-managing and -distributing workers
 
 ## Usage
