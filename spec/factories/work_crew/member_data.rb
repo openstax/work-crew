@@ -13,6 +13,5 @@ FactoryBot.define do
     next_end_time   { Time.now.utc }
     next_boss_time  { Time.now.utc }
     next_work_time  { Time.now.utc }
-    next_wake_time  { Time.now.utc }
   end
 end

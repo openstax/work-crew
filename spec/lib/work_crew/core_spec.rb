@@ -38,8 +38,11 @@ RSpec.describe 'WorkCrew::Core#process' do
 
   let(:given_world) {
     dbl = double
+    allow(dbl).to receive(:has_group_records?)
+              .and_return(has_group_records_return_value)
     allow(dbl).to receive(:read_group_records)
     allow(dbl).to receive(:categorize_records)
+    allow(dbl).to receive(:clear_group_records)
     allow(dbl).to receive(:create_instance_record)
     allow(dbl).to receive(:has_instance_record?)
               .and_return(has_instance_record_return_value)
@@ -55,6 +58,10 @@ RSpec.describe 'WorkCrew::Core#process' do
               .and_return(has_next_work_time_return_value)
     allow(dbl).to receive(:has_next_end_time?)
               .and_return(has_next_end_time_return_value)
+    allow(dbl).to receive(:has_next_update_time?)
+              .and_return(has_next_update_time_return_value)
+    allow(dbl).to receive(:is_time_for_update?)
+              .and_return(is_time_for_update_return_value)
     allow(dbl).to receive(:clear_next_boss_time)
     allow(dbl).to receive(:destroy_dead_records)
     allow(dbl).to receive(:allocate_modulo)
@@ -67,6 +74,7 @@ RSpec.describe 'WorkCrew::Core#process' do
               .and_return(boss_block_should_be_called_return_value)
     allow(dbl).to receive(:call_boss_block)
     allow(dbl).to receive(:compute_and_set_next_boss_time)
+    allow(dbl).to receive(:compute_and_set_next_update_time)
     allow(dbl).to receive(:work_block_should_be_called?)
               .and_return(work_block_should_be_called_return_value)
     allow(dbl).to receive(:call_work_block)
@@ -78,10 +86,13 @@ RSpec.describe 'WorkCrew::Core#process' do
   }
 
   let(:has_instance_record_return_value)         { false }
+  let(:has_group_records_return_value)           { false }
   let(:has_boss_record_return_value)             { false }
   let(:has_next_boss_time_return_value)          { false }
   let(:has_next_work_time_return_value)          { false }
   let(:has_next_end_time_return_value)           { false }
+  let(:has_next_update_time_return_value)        { false }
+  let(:is_time_for_update_return_value)          { false }
   let(:am_boss_return_value)                     { false }
   let(:has_next_boss_time_return_value)          { false }
   let(:allocate_modulo_return_value)             { false }
@@ -91,8 +102,10 @@ RSpec.describe 'WorkCrew::Core#process' do
   let(:work_block_should_be_called_return_value) { false }
 
   all_methods = [
+    :has_group_records?,
     :read_group_records,
     :categorize_records,
+    :clear_group_records,
     :has_instance_record?,
     :create_instance_record,
     :has_boss_record?,
@@ -101,6 +114,8 @@ RSpec.describe 'WorkCrew::Core#process' do
     :has_next_boss_time?,
     :has_next_work_time?,
     :has_next_end_time?,
+    :has_next_update_time?,
+    :is_time_for_update?,
     :compute_and_set_next_boss_time,
     :clear_next_boss_time,
     :destroy_dead_records,
@@ -111,12 +126,13 @@ RSpec.describe 'WorkCrew::Core#process' do
     :boss_block_should_be_called?,
     :call_boss_block,
     :compute_and_set_next_boss_time,
+    :compute_and_set_next_update_time,
     :work_block_should_be_called?,
     :call_work_block,
     :compute_and_set_next_work_time,
     :compute_next_wake_time,
     :sleep_until_next_event,
-    :save_record,
+    :save_record
   ]
 
   let(:action) { core.process(process_time: given_process_time) }
@@ -133,8 +149,9 @@ RSpec.describe 'WorkCrew::Core#process' do
   context 'when the target instance record does not exist' do
     let(:has_instance_record_return_value) { false }
 
-    called_methods    = [:create_instance_record]
+    called_methods    = [:create_instance_record, :clear_group_records]
     unchecked_methods = [
+      :has_group_records?,
       :read_group_records,
       :categorize_records,
       :has_instance_record?,
@@ -157,8 +174,10 @@ RSpec.describe 'WorkCrew::Core#process' do
 
       called_methods = [
         :update_boss_vote,
+        :clear_group_records
       ]
       unchecked_methods = [
+        :has_group_records?,
         :read_group_records,
         :categorize_records,
         :has_instance_record?,
@@ -197,6 +216,7 @@ RSpec.describe 'WorkCrew::Core#process' do
 
         called_methods    = [:am_boss?]
         unchecked_methods = [
+          :has_group_records?,
           :read_group_records,
           :categorize_records,
           :has_instance_record?,
