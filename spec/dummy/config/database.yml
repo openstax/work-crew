@@ -1,12 +1,13 @@
 default: &default
   adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV['WC_DB_USER'] || 'work_crew' %>
+  password: <%= ENV['WC_DB_PASS'] || 'work_crew' %>
   timeout: 5000
 
 development:
   <<: *default
   encoding: unicode
-  username: work_crew
   database: work_crew_dev
 
 # Warning: The database defined as "test" will be erased and
@@ -15,6 +16,5 @@ development:
 test:
   <<: *default
   encoding: unicode
-  username: work_crew
-  database: work_crew_test
-
+  database: '<%= ENV['WC_TEST_DB'] || 'work_crew_test' %><%= \
+                 "_#{ENV['TEST_ENV_NUMBER']}" if !ENV['TEST_ENV_NUMBER'].blank? %>'

@@ -24,6 +24,14 @@ Or install it yourself as:
 $ gem install work_crew
 ```
 
+## Usage
+
+To run a simple test work crew member, run:
+
+```
+rake work_crew:member:test[a7c89b00-72b8-45d8-89b2-2af022cb83b5,1.0,5.0,0.5,2.5,0.0]
+```
+
 ## Contributing
 
 This gem uses Postgres.  Run
