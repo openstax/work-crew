@@ -263,7 +263,7 @@ module WorkCrew
 
     def destroy_dead_records
       WorkCrew::Helpers.destroy_dead_records(
-        protocol:          self,
+        work_crew_member:          self,
         dead_records:      @dead_records,
         dead_record_block: @dead_record_block,
       )
@@ -275,7 +275,7 @@ module WorkCrew
     end
 
     def call_boss_block
-      @boss_block.call(protocol: self) unless @boss_block.nil?
+      @boss_block.call(work_crew_member: self) unless @boss_block.nil?
     end
 
     def work_block_should_be_called?(current_time:)
@@ -284,7 +284,7 @@ module WorkCrew
     end
 
     def call_work_block
-      @work_block.call(protocol: self) unless @work_block.nil?
+      @work_block.call(work_crew_member: self) unless @work_block.nil?
     end
 
     def end_block_should_be_called?(current_time:)
@@ -293,7 +293,7 @@ module WorkCrew
     end
 
     def call_end_block
-      @end_block.call(protocol: self) unless @end_block.nil?
+      @end_block.call(work_crew_member: self) unless @end_block.nil?
     end
 
     def is_time_for_update?(current_time:)

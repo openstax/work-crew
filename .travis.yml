@@ -6,3 +6,8 @@ cache: bundler
 branches:
   only:
     - master
+before_script:
+  - export WC_DB_USER=postgres
+  - export WC_DB_PASS=
+  - export WC_TEST_DB=travis_ci_test
+  - bundle exec rake db:create:all db:migrate

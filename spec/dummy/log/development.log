@@ -538,3 +538,1211 @@ Migrating to InstallWorkCrew (0)
   ↳ /Users/jps/.rbenv/versions/2.5.0/bin/rake:23
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/jps/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[36mWorkCrew::MemberData Load (24.5ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:80
+  [1m[36mWorkCrew::MemberData Create (0.5ms)[0m  [1m[32mINSERT INTO "work_crew_member_data" ("group_uuid", "group_desc", "instance_uuid", "instance_desc", "instance_count", "instance_modulo", "boss_uuid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"], ["group_desc", "some group desc"], ["instance_uuid", "36d3d26c-193c-4f08-bbee-64ef2f1713b9"], ["instance_desc", "00028"], ["instance_count", 1], ["instance_modulo", -1720], ["boss_uuid", "36d3d26c-193c-4f08-bbee-64ef2f1713b9"], ["created_at", "2018-06-22 22:03:15.492786"], ["updated_at", "2018-06-22 22:03:15.492786"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:80
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:80
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "instance_modulo" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:03:15.514279"], ["instance_modulo", 0], ["id", 1]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1 WHERE "work_crew_member_data"."id" = $2[0m  [["updated_at", "2018-06-22 22:03:15.522992"], ["id", 1]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_boss_time" = $2, "next_end_time" = $3, "next_work_time" = $4, "next_update_time" = $5 WHERE "work_crew_member_data"."id" = $6[0m  [["updated_at", "2018-06-22 22:03:15.749922"], ["next_boss_time", "2018-06-22 22:03:20"], ["next_end_time", "2018-06-22 22:03:16"], ["next_work_time", "2018-06-22 22:03:16"], ["next_update_time", "2018-06-22 22:03:16.065049"], ["id", 1]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT  "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."instance_uuid" = $1 LIMIT $2[0m  [["instance_uuid", "36d3d26c-193c-4f08-bbee-64ef2f1713b9"], ["LIMIT", 1]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/member.rb:326
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/member.rb:328
+  [1m[36mWorkCrew::MemberData Destroy (0.3ms)[0m  [1m[31mDELETE FROM "work_crew_member_data" WHERE "work_crew_member_data"."id" = $1[0m  [["id", 1]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/member.rb:328
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/member.rb:328
+  [1m[36mWorkCrew::MemberData Load (0.6ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:80
+  [1m[36mWorkCrew::MemberData Create (0.5ms)[0m  [1m[32mINSERT INTO "work_crew_member_data" ("group_uuid", "group_desc", "instance_uuid", "instance_desc", "instance_count", "instance_modulo", "boss_uuid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"], ["group_desc", "some group desc"], ["instance_uuid", "d443221d-b2d3-451d-81fb-520faa30d1ca"], ["instance_desc", "00244"], ["instance_count", 1], ["instance_modulo", -1365], ["boss_uuid", "d443221d-b2d3-451d-81fb-520faa30d1ca"], ["created_at", "2018-06-22 22:05:20.474089"], ["updated_at", "2018-06-22 22:05:20.474089"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:80
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:80
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.5ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "instance_modulo" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:05:20.491835"], ["instance_modulo", 0], ["id", 2]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1 WHERE "work_crew_member_data"."id" = $2[0m  [["updated_at", "2018-06-22 22:05:20.495101"], ["id", 2]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_boss_time" = $2, "next_end_time" = $3, "next_work_time" = $4, "next_update_time" = $5 WHERE "work_crew_member_data"."id" = $6[0m  [["updated_at", "2018-06-22 22:05:20.525277"], ["next_boss_time", "2018-06-22 22:05:25"], ["next_end_time", "2018-06-22 22:05:21"], ["next_work_time", "2018-06-22 22:05:21"], ["next_update_time", "2018-06-22 22:05:20.842630"], ["id", 2]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.4ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:05:20.846655"], ["next_update_time", "2018-06-22 22:05:21.160940"], ["id", 2]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT  "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."instance_uuid" = $1 LIMIT $2[0m  [["instance_uuid", "d443221d-b2d3-451d-81fb-520faa30d1ca"], ["LIMIT", 1]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/member.rb:326
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/member.rb:328
+  [1m[36mWorkCrew::MemberData Destroy (0.2ms)[0m  [1m[31mDELETE FROM "work_crew_member_data" WHERE "work_crew_member_data"."id" = $1[0m  [["id", 2]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/member.rb:328
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/member.rb:328
+  [1m[36mWorkCrew::MemberData Load (0.5ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:80
+  [1m[36mWorkCrew::MemberData Create (0.4ms)[0m  [1m[32mINSERT INTO "work_crew_member_data" ("group_uuid", "group_desc", "instance_uuid", "instance_desc", "instance_count", "instance_modulo", "boss_uuid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"], ["group_desc", "some group desc"], ["instance_uuid", "a00ad2db-cf15-4b44-b460-0453cbf916dd"], ["instance_desc", "00938"], ["instance_count", 1], ["instance_modulo", -1301], ["boss_uuid", "a00ad2db-cf15-4b44-b460-0453cbf916dd"], ["created_at", "2018-06-22 22:06:10.639779"], ["updated_at", "2018-06-22 22:06:10.639779"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:80
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:80
+  [1m[36mWorkCrew::MemberData Load (0.4ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "instance_modulo" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:10.657874"], ["instance_modulo", 0], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.2ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1 WHERE "work_crew_member_data"."id" = $2[0m  [["updated_at", "2018-06-22 22:06:10.660054"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_boss_time" = $2, "next_end_time" = $3, "next_work_time" = $4, "next_update_time" = $5 WHERE "work_crew_member_data"."id" = $6[0m  [["updated_at", "2018-06-22 22:06:10.819236"], ["next_boss_time", "2018-06-22 22:06:15"], ["next_end_time", "2018-06-22 22:06:11"], ["next_work_time", "2018-06-22 22:06:11"], ["next_update_time", "2018-06-22 22:06:11.135635"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:11.139786"], ["next_end_time", "2018-06-22 22:06:11.500000"], ["next_work_time", "2018-06-22 22:06:12"], ["next_update_time", "2018-06-22 22:06:11.453945"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:11.461629"], ["next_update_time", "2018-06-22 22:06:11.772255"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:11.778236"], ["next_end_time", "2018-06-22 22:06:12"], ["next_update_time", "2018-06-22 22:06:12.090565"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:12.095200"], ["next_end_time", "2018-06-22 22:06:12.500000"], ["next_work_time", "2018-06-22 22:06:13"], ["next_update_time", "2018-06-22 22:06:12.408875"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:12.413513"], ["next_update_time", "2018-06-22 22:06:12.727185"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:12.728527"], ["next_end_time", "2018-06-22 22:06:13"], ["next_update_time", "2018-06-22 22:06:13.045496"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:13.050277"], ["next_end_time", "2018-06-22 22:06:13.500000"], ["next_work_time", "2018-06-22 22:06:14"], ["next_update_time", "2018-06-22 22:06:13.363806"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:13.370245"], ["next_update_time", "2018-06-22 22:06:13.682116"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.4ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:13.685652"], ["next_end_time", "2018-06-22 22:06:14"], ["next_update_time", "2018-06-22 22:06:14.000426"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:14.004223"], ["next_end_time", "2018-06-22 22:06:14.500000"], ["next_work_time", "2018-06-22 22:06:15"], ["next_update_time", "2018-06-22 22:06:14.318736"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:14.322341"], ["next_update_time", "2018-06-22 22:06:14.637046"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:14.637956"], ["next_end_time", "2018-06-22 22:06:15"], ["next_update_time", "2018-06-22 22:06:14.955357"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:14.959729"], ["next_update_time", "2018-06-22 22:06:15.273667"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_boss_time" = $2, "next_end_time" = $3, "next_work_time" = $4, "next_update_time" = $5 WHERE "work_crew_member_data"."id" = $6[0m  [["updated_at", "2018-06-22 22:06:15.279158"], ["next_boss_time", "2018-06-22 22:06:20"], ["next_end_time", "2018-06-22 22:06:15.500000"], ["next_work_time", "2018-06-22 22:06:16"], ["next_update_time", "2018-06-22 22:06:15.591977"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:15.597722"], ["next_end_time", "2018-06-22 22:06:16"], ["next_update_time", "2018-06-22 22:06:15.910287"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:15.912992"], ["next_update_time", "2018-06-22 22:06:16.228597"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.5ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:16.234472"], ["next_end_time", "2018-06-22 22:06:16.500000"], ["next_work_time", "2018-06-22 22:06:17"], ["next_update_time", "2018-06-22 22:06:16.546907"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:16.551601"], ["next_end_time", "2018-06-22 22:06:17"], ["next_update_time", "2018-06-22 22:06:16.865217"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.2ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:16.868473"], ["next_update_time", "2018-06-22 22:06:17.183528"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:17.184838"], ["next_end_time", "2018-06-22 22:06:17.500000"], ["next_work_time", "2018-06-22 22:06:18"], ["next_update_time", "2018-06-22 22:06:17.501838"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:17.505616"], ["next_end_time", "2018-06-22 22:06:18"], ["next_update_time", "2018-06-22 22:06:17.820148"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:17.823610"], ["next_update_time", "2018-06-22 22:06:18.138458"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:18.140442"], ["next_end_time", "2018-06-22 22:06:18.500000"], ["next_work_time", "2018-06-22 22:06:19"], ["next_update_time", "2018-06-22 22:06:18.456768"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:18.462284"], ["next_update_time", "2018-06-22 22:06:18.775078"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:18.779555"], ["next_end_time", "2018-06-22 22:06:19"], ["next_update_time", "2018-06-22 22:06:19.093389"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.6ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:19.098107"], ["next_end_time", "2018-06-22 22:06:19.500000"], ["next_work_time", "2018-06-22 22:06:20"], ["next_update_time", "2018-06-22 22:06:19.411699"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:19.419108"], ["next_update_time", "2018-06-22 22:06:19.730009"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:19.735252"], ["next_end_time", "2018-06-22 22:06:20"], ["next_update_time", "2018-06-22 22:06:20.048319"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_boss_time" = $2, "next_end_time" = $3, "next_work_time" = $4, "next_update_time" = $5 WHERE "work_crew_member_data"."id" = $6[0m  [["updated_at", "2018-06-22 22:06:20.051733"], ["next_boss_time", "2018-06-22 22:06:25"], ["next_end_time", "2018-06-22 22:06:20.500000"], ["next_work_time", "2018-06-22 22:06:21"], ["next_update_time", "2018-06-22 22:06:20.366629"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:20.370351"], ["next_update_time", "2018-06-22 22:06:20.684939"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:20.691168"], ["next_end_time", "2018-06-22 22:06:21"], ["next_update_time", "2018-06-22 22:06:21.003250"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:21.004811"], ["next_end_time", "2018-06-22 22:06:21.500000"], ["next_work_time", "2018-06-22 22:06:22"], ["next_update_time", "2018-06-22 22:06:21.321560"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:21.328154"], ["next_update_time", "2018-06-22 22:06:21.639870"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:21.640738"], ["next_end_time", "2018-06-22 22:06:22"], ["next_update_time", "2018-06-22 22:06:21.958180"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:21.963311"], ["next_update_time", "2018-06-22 22:06:22.276490"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:22.282339"], ["next_end_time", "2018-06-22 22:06:22.500000"], ["next_work_time", "2018-06-22 22:06:23"], ["next_update_time", "2018-06-22 22:06:22.594800"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:22.597578"], ["next_end_time", "2018-06-22 22:06:23"], ["next_update_time", "2018-06-22 22:06:22.913110"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:22.918992"], ["next_update_time", "2018-06-22 22:06:23.231421"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:23.234981"], ["next_end_time", "2018-06-22 22:06:23.500000"], ["next_work_time", "2018-06-22 22:06:24"], ["next_update_time", "2018-06-22 22:06:23.549731"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:23.551472"], ["next_end_time", "2018-06-22 22:06:24"], ["next_update_time", "2018-06-22 22:06:23.868041"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:23.874497"], ["next_update_time", "2018-06-22 22:06:24.186351"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:24.188465"], ["next_end_time", "2018-06-22 22:06:24.500000"], ["next_work_time", "2018-06-22 22:06:25"], ["next_update_time", "2018-06-22 22:06:24.504661"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:24.508787"], ["next_end_time", "2018-06-22 22:06:25"], ["next_update_time", "2018-06-22 22:06:24.822971"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:24.829710"], ["next_update_time", "2018-06-22 22:06:25.141281"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_boss_time" = $2, "next_end_time" = $3, "next_work_time" = $4, "next_update_time" = $5 WHERE "work_crew_member_data"."id" = $6[0m  [["updated_at", "2018-06-22 22:06:25.145068"], ["next_boss_time", "2018-06-22 22:06:30"], ["next_end_time", "2018-06-22 22:06:25.500000"], ["next_work_time", "2018-06-22 22:06:26"], ["next_update_time", "2018-06-22 22:06:25.459592"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:25.463417"], ["next_update_time", "2018-06-22 22:06:25.777902"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:25.778993"], ["next_end_time", "2018-06-22 22:06:26"], ["next_update_time", "2018-06-22 22:06:26.096212"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:26.101312"], ["next_end_time", "2018-06-22 22:06:26.500000"], ["next_work_time", "2018-06-22 22:06:27"], ["next_update_time", "2018-06-22 22:06:26.414522"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:26.420362"], ["next_update_time", "2018-06-22 22:06:26.732832"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:26.734629"], ["next_end_time", "2018-06-22 22:06:27"], ["next_update_time", "2018-06-22 22:06:27.051142"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:27.056511"], ["next_end_time", "2018-06-22 22:06:27.500000"], ["next_work_time", "2018-06-22 22:06:28"], ["next_update_time", "2018-06-22 22:06:27.369453"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:27.375709"], ["next_update_time", "2018-06-22 22:06:27.687763"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:27.690183"], ["next_end_time", "2018-06-22 22:06:28"], ["next_update_time", "2018-06-22 22:06:28.006073"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:28.007216"], ["next_end_time", "2018-06-22 22:06:28.500000"], ["next_work_time", "2018-06-22 22:06:29"], ["next_update_time", "2018-06-22 22:06:28.324383"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:28.329760"], ["next_update_time", "2018-06-22 22:06:28.642693"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:28.647580"], ["next_end_time", "2018-06-22 22:06:29"], ["next_update_time", "2018-06-22 22:06:28.961003"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:28.965979"], ["next_update_time", "2018-06-22 22:06:29.279314"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:29.283364"], ["next_end_time", "2018-06-22 22:06:29.500000"], ["next_work_time", "2018-06-22 22:06:30"], ["next_update_time", "2018-06-22 22:06:29.597624"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:29.601931"], ["next_end_time", "2018-06-22 22:06:30"], ["next_update_time", "2018-06-22 22:06:29.915934"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:29.919053"], ["next_update_time", "2018-06-22 22:06:30.234244"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_boss_time" = $2, "next_end_time" = $3, "next_work_time" = $4, "next_update_time" = $5 WHERE "work_crew_member_data"."id" = $6[0m  [["updated_at", "2018-06-22 22:06:30.237238"], ["next_boss_time", "2018-06-22 22:06:35"], ["next_end_time", "2018-06-22 22:06:30.500000"], ["next_work_time", "2018-06-22 22:06:31"], ["next_update_time", "2018-06-22 22:06:30.552554"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.4ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:30.558046"], ["next_end_time", "2018-06-22 22:06:31"], ["next_update_time", "2018-06-22 22:06:30.870864"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:30.877915"], ["next_update_time", "2018-06-22 22:06:31.189175"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:31.194128"], ["next_end_time", "2018-06-22 22:06:31.500000"], ["next_work_time", "2018-06-22 22:06:32"], ["next_update_time", "2018-06-22 22:06:31.507485"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:31.508694"], ["next_end_time", "2018-06-22 22:06:32"], ["next_update_time", "2018-06-22 22:06:31.825795"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:31.829430"], ["next_update_time", "2018-06-22 22:06:32.144105"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:32.149803"], ["next_end_time", "2018-06-22 22:06:32.500000"], ["next_work_time", "2018-06-22 22:06:33"], ["next_update_time", "2018-06-22 22:06:32.462415"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:32.466772"], ["next_update_time", "2018-06-22 22:06:32.780725"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:32.782207"], ["next_end_time", "2018-06-22 22:06:33"], ["next_update_time", "2018-06-22 22:06:33.099035"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:33.100981"], ["next_end_time", "2018-06-22 22:06:33.500000"], ["next_work_time", "2018-06-22 22:06:34"], ["next_update_time", "2018-06-22 22:06:33.417346"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:33.422715"], ["next_update_time", "2018-06-22 22:06:33.735656"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.7ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:33.740840"], ["next_end_time", "2018-06-22 22:06:34"], ["next_update_time", "2018-06-22 22:06:34.053966"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.4ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:34.059836"], ["next_end_time", "2018-06-22 22:06:34.500000"], ["next_work_time", "2018-06-22 22:06:35"], ["next_update_time", "2018-06-22 22:06:34.372276"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:34.379961"], ["next_update_time", "2018-06-22 22:06:34.690586"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:34.695108"], ["next_end_time", "2018-06-22 22:06:35"], ["next_update_time", "2018-06-22 22:06:35.008896"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_boss_time" = $2, "next_end_time" = $3, "next_work_time" = $4, "next_update_time" = $5 WHERE "work_crew_member_data"."id" = $6[0m  [["updated_at", "2018-06-22 22:06:35.010193"], ["next_boss_time", "2018-06-22 22:06:40"], ["next_end_time", "2018-06-22 22:06:35.500000"], ["next_work_time", "2018-06-22 22:06:36"], ["next_update_time", "2018-06-22 22:06:35.327206"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.4ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:35.331766"], ["next_update_time", "2018-06-22 22:06:35.645517"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:35.650388"], ["next_end_time", "2018-06-22 22:06:36"], ["next_update_time", "2018-06-22 22:06:35.963827"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:35.968879"], ["next_update_time", "2018-06-22 22:06:36.282137"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:36.285537"], ["next_end_time", "2018-06-22 22:06:36.500000"], ["next_work_time", "2018-06-22 22:06:37"], ["next_update_time", "2018-06-22 22:06:36.600447"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:36.601349"], ["next_end_time", "2018-06-22 22:06:37"], ["next_update_time", "2018-06-22 22:06:36.918757"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:36.922639"], ["next_update_time", "2018-06-22 22:06:37.237067"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:37.237860"], ["next_end_time", "2018-06-22 22:06:37.500000"], ["next_work_time", "2018-06-22 22:06:38"], ["next_update_time", "2018-06-22 22:06:37.555378"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:37.557767"], ["next_end_time", "2018-06-22 22:06:38"], ["next_update_time", "2018-06-22 22:06:37.873688"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:37.881031"], ["next_update_time", "2018-06-22 22:06:38.191998"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:38.197587"], ["next_end_time", "2018-06-22 22:06:38.500000"], ["next_work_time", "2018-06-22 22:06:39"], ["next_update_time", "2018-06-22 22:06:38.510308"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:38.511886"], ["next_end_time", "2018-06-22 22:06:39"], ["next_update_time", "2018-06-22 22:06:38.828618"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:38.830489"], ["next_update_time", "2018-06-22 22:06:39.146928"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:39.150213"], ["next_end_time", "2018-06-22 22:06:39.500000"], ["next_work_time", "2018-06-22 22:06:40"], ["next_update_time", "2018-06-22 22:06:39.465239"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:39.470750"], ["next_update_time", "2018-06-22 22:06:39.783549"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:39.789453"], ["next_end_time", "2018-06-22 22:06:40"], ["next_update_time", "2018-06-22 22:06:40.101859"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_boss_time" = $2, "next_end_time" = $3, "next_work_time" = $4, "next_update_time" = $5 WHERE "work_crew_member_data"."id" = $6[0m  [["updated_at", "2018-06-22 22:06:40.106582"], ["next_boss_time", "2018-06-22 22:06:45"], ["next_end_time", "2018-06-22 22:06:40.500000"], ["next_work_time", "2018-06-22 22:06:41"], ["next_update_time", "2018-06-22 22:06:40.420169"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:40.422869"], ["next_update_time", "2018-06-22 22:06:40.738479"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:40.743952"], ["next_end_time", "2018-06-22 22:06:41"], ["next_update_time", "2018-06-22 22:06:41.056789"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:41.060534"], ["next_end_time", "2018-06-22 22:06:41.500000"], ["next_work_time", "2018-06-22 22:06:42"], ["next_update_time", "2018-06-22 22:06:41.375099"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:41.381333"], ["next_update_time", "2018-06-22 22:06:41.693410"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:41.697060"], ["next_end_time", "2018-06-22 22:06:42"], ["next_update_time", "2018-06-22 22:06:42.011720"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:42.013665"], ["next_end_time", "2018-06-22 22:06:42.500000"], ["next_work_time", "2018-06-22 22:06:43"], ["next_update_time", "2018-06-22 22:06:42.330030"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:42.337099"], ["next_update_time", "2018-06-22 22:06:42.648340"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:42.653136"], ["next_end_time", "2018-06-22 22:06:43"], ["next_update_time", "2018-06-22 22:06:42.966650"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:42.971662"], ["next_update_time", "2018-06-22 22:06:43.284960"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:43.289068"], ["next_end_time", "2018-06-22 22:06:43.500000"], ["next_work_time", "2018-06-22 22:06:44"], ["next_update_time", "2018-06-22 22:06:43.603271"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:43.605243"], ["next_end_time", "2018-06-22 22:06:44"], ["next_update_time", "2018-06-22 22:06:43.921581"], ["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT  "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."instance_uuid" = $1 LIMIT $2[0m  [["instance_uuid", "a00ad2db-cf15-4b44-b460-0453cbf916dd"], ["LIMIT", 1]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/member.rb:326
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/member.rb:328
+  [1m[36mWorkCrew::MemberData Destroy (0.2ms)[0m  [1m[31mDELETE FROM "work_crew_member_data" WHERE "work_crew_member_data"."id" = $1[0m  [["id", 3]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/member.rb:328
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/member.rb:328
+  [1m[36mWorkCrew::MemberData Load (0.5ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:80
+  [1m[36mWorkCrew::MemberData Create (0.5ms)[0m  [1m[32mINSERT INTO "work_crew_member_data" ("group_uuid", "group_desc", "instance_uuid", "instance_desc", "instance_count", "instance_modulo", "boss_uuid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"], ["group_desc", "some group desc"], ["instance_uuid", "73a069d1-7ad0-49c9-9cf1-02bd4f2c5e6e"], ["instance_desc", "00719"], ["instance_count", 1], ["instance_modulo", -1961], ["boss_uuid", "73a069d1-7ad0-49c9-9cf1-02bd4f2c5e6e"], ["created_at", "2018-06-22 22:06:46.161260"], ["updated_at", "2018-06-22 22:06:46.161260"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:80
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:80
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "instance_modulo" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:46.179106"], ["instance_modulo", 0], ["id", 4]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.2ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1 WHERE "work_crew_member_data"."id" = $2[0m  [["updated_at", "2018-06-22 22:06:46.181436"], ["id", 4]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_boss_time" = $2, "next_end_time" = $3, "next_work_time" = $4, "next_update_time" = $5 WHERE "work_crew_member_data"."id" = $6[0m  [["updated_at", "2018-06-22 22:06:46.472025"], ["next_boss_time", "2018-06-22 22:06:50"], ["next_end_time", "2018-06-22 22:06:46.500000"], ["next_work_time", "2018-06-22 22:06:47"], ["next_update_time", "2018-06-22 22:06:46.786372"], ["id", 4]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:46.788077"], ["next_end_time", "2018-06-22 22:06:47"], ["next_update_time", "2018-06-22 22:06:47.104682"], ["id", 4]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:47.106347"], ["next_end_time", "2018-06-22 22:06:47.500000"], ["next_work_time", "2018-06-22 22:06:48"], ["next_update_time", "2018-06-22 22:06:47.422992"], ["id", 4]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:47.429748"], ["next_update_time", "2018-06-22 22:06:47.741302"], ["id", 4]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:47.745246"], ["next_end_time", "2018-06-22 22:06:48"], ["next_update_time", "2018-06-22 22:06:48.059613"], ["id", 4]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:48.063342"], ["next_end_time", "2018-06-22 22:06:48.500000"], ["next_work_time", "2018-06-22 22:06:49"], ["next_update_time", "2018-06-22 22:06:48.377923"], ["id", 4]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:48.384166"], ["next_update_time", "2018-06-22 22:06:48.696233"], ["id", 4]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.5ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:48.699456"], ["next_end_time", "2018-06-22 22:06:49"], ["next_update_time", "2018-06-22 22:06:49.014543"], ["id", 4]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.5ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:49.015993"], ["next_end_time", "2018-06-22 22:06:49.500000"], ["next_work_time", "2018-06-22 22:06:50"], ["next_update_time", "2018-06-22 22:06:49.332853"], ["id", 4]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:49.338013"], ["next_update_time", "2018-06-22 22:06:49.651163"], ["id", 4]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:49.656662"], ["next_end_time", "2018-06-22 22:06:50"], ["next_update_time", "2018-06-22 22:06:49.969474"], ["id", 4]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:49.971889"], ["next_update_time", "2018-06-22 22:06:50.287784"], ["id", 4]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_boss_time" = $2, "next_end_time" = $3, "next_work_time" = $4, "next_update_time" = $5 WHERE "work_crew_member_data"."id" = $6[0m  [["updated_at", "2018-06-22 22:06:50.293642"], ["next_boss_time", "2018-06-22 22:06:55"], ["next_end_time", "2018-06-22 22:06:50.500000"], ["next_work_time", "2018-06-22 22:06:51"], ["next_update_time", "2018-06-22 22:06:50.606094"], ["id", 4]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:50.608074"], ["next_end_time", "2018-06-22 22:06:51"], ["next_update_time", "2018-06-22 22:06:50.924404"], ["id", 4]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:50.927929"], ["next_update_time", "2018-06-22 22:06:51.242714"], ["id", 4]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:51.246556"], ["next_end_time", "2018-06-22 22:06:51.500000"], ["next_work_time", "2018-06-22 22:06:52"], ["next_update_time", "2018-06-22 22:06:51.561024"], ["id", 4]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:51.565387"], ["next_end_time", "2018-06-22 22:06:52"], ["next_update_time", "2018-06-22 22:06:51.879335"], ["id", 4]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.2ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:51.882616"], ["next_update_time", "2018-06-22 22:06:52.197645"], ["id", 4]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.3ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:52.202635"], ["next_end_time", "2018-06-22 22:06:52.500000"], ["next_work_time", "2018-06-22 22:06:53"], ["next_update_time", "2018-06-22 22:06:52.515955"], ["id", 4]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_update_time" = $3 WHERE "work_crew_member_data"."id" = $4[0m  [["updated_at", "2018-06-22 22:06:52.520038"], ["next_end_time", "2018-06-22 22:06:53"], ["next_update_time", "2018-06-22 22:06:52.834265"], ["id", 4]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:52.840017"], ["next_update_time", "2018-06-22 22:06:53.152575"], ["id", 4]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_end_time" = $2, "next_work_time" = $3, "next_update_time" = $4 WHERE "work_crew_member_data"."id" = $5[0m  [["updated_at", "2018-06-22 22:06:53.155414"], ["next_end_time", "2018-06-22 22:06:53.500000"], ["next_work_time", "2018-06-22 22:06:54"], ["next_update_time", "2018-06-22 22:06:53.470885"], ["id", 4]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Update (0.4ms)[0m  [1m[33mUPDATE "work_crew_member_data" SET "updated_at" = $1, "next_update_time" = $2 WHERE "work_crew_member_data"."id" = $3[0m  [["updated_at", "2018-06-22 22:06:53.478586"], ["next_update_time", "2018-06-22 22:06:53.789196"], ["id", 4]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:108
+  [1m[36mWorkCrew::MemberData Load (0.2ms)[0m  [1m[34mSELECT "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."group_uuid" = $1[0m  [["group_uuid", "a7c89b00-72b8-45d8-89b2-2af022cb83b5"]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/helpers.rb:18
+  [1m[36mWorkCrew::MemberData Load (0.3ms)[0m  [1m[34mSELECT  "work_crew_member_data".* FROM "work_crew_member_data" WHERE "work_crew_member_data"."instance_uuid" = $1 LIMIT $2[0m  [["instance_uuid", "73a069d1-7ad0-49c9-9cf1-02bd4f2c5e6e"], ["LIMIT", 1]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/member.rb:326
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/member.rb:328
+  [1m[36mWorkCrew::MemberData Destroy (0.3ms)[0m  [1m[31mDELETE FROM "work_crew_member_data" WHERE "work_crew_member_data"."id" = $1[0m  [["id", 4]]
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/member.rb:328
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/dev/openstax/work_crew/lib/work_crew/member.rb:328
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jps/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jps/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (120.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "work_crew_test"[0m
+  ↳ /Users/jps/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (405.5ms)[0m  [1m[35mCREATE DATABASE "work_crew_test" ENCODING = 'unicode'[0m
+  ↳ /Users/jps/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35mSQL (1.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "work_crew_member_data" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE TABLE "work_crew_member_data" ("id" bigserial primary key, "group_uuid" uuid NOT NULL, "group_desc" character varying NOT NULL, "instance_uuid" uuid NOT NULL, "instance_desc" character varying NOT NULL, "instance_count" integer NOT NULL, "instance_modulo" integer NOT NULL, "boss_uuid" uuid NOT NULL, "next_end_time" timestamp, "next_boss_time" timestamp, "next_work_time" timestamp, "next_update_time" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_work_crew_member_data_on_group_uuid_and_instance_modulo" ON "work_crew_member_data"  ("group_uuid", "instance_modulo")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_work_crew_member_data_on_instance_uuid" ON "work_crew_member_data"  ("instance_uuid")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (24.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-06-22 22:09:28.525795"], ["updated_at", "2018-06-22 22:09:28.525795"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/jps/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jps/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2018-06-22 22:09:28.529911"], ["key", "environment"]]
+  ↳ /Users/jps/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jps/.rbenv/versions/2.5.0/bin/rake:23

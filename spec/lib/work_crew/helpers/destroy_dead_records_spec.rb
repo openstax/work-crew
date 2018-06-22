@@ -8,18 +8,18 @@ class TestBlock
     @call_times       = []
   end
 
-  def call(protocol:, record:)
+  def call(work_crew_member:, record:)
     @call_times << Time.now()
     @call_count += 1
   end
 end
 
 RSpec.describe 'WorkCrew::Helpers.destroy_dead_records' do
-  let(:protocol) { 'some object' }
+  let(:work_crew_member) { 'some object' }
 
   let(:action) {
     WorkCrew::Helpers.destroy_dead_records(
-      protocol:            protocol,
+      work_crew_member:    work_crew_member,
       dead_records:        dead_records,
       dead_record_block:   dead_record_block,
     )
