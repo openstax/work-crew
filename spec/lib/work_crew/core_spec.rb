@@ -195,7 +195,7 @@ RSpec.describe 'WorkCrew::Core#process' do
       called_methods    = [
         :align_with_boss,
         :compute_next_wake_time,
-        :save_record,
+        # :save_record, # masked by mocked `align_with_boss`
         :sleep_until_next_event,
       ]
       uncalled_methods  = []
@@ -214,7 +214,7 @@ RSpec.describe 'WorkCrew::Core#process' do
       context 'when the instance modulo needs to be allocated' do
         let(:allocate_modulo_return_value) { true }
 
-        called_methods    = [:am_boss?]
+        called_methods    = [:am_boss?, :clear_group_records, :save_record]
         unchecked_methods = [
           :has_group_records?,
           :read_group_records,
